@@ -1,9 +1,9 @@
 <?php
-  require_once("utils/env.php");
-  require_once("db/connection.php");
+  // include_once("./utils/env.php");
+  // include_once("./db/connection.php");
 
-  function configure() {
-    load_env();
-    new SQLConnection();
-  }
+  // if(!isset($_ENV["CONFIGURED"])) {
+  //   load_env();
+  //   new SQLConnection();
+  // }
 ?>

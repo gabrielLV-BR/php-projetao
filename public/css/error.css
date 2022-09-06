@@ -1,0 +1,36 @@
+#error {
+    background-color: #ff4258;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+
+    border: none;
+
+    position: fixed;
+    left: 50%;
+    bottom: -10%;
+    transform: translateX(-50%);
+
+    transition: bottom ease 400ms;
+
+    z-index: 2;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#error::after {
+    content: "";
+    opacity: 0.0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 200ms;
+}
+
+#error:hover::after {
+    opacity: 0.5;
+}
