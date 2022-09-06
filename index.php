@@ -1,5 +1,10 @@
 <?php 
   require_once("configure.php");
+  require_once("./db/connection.php");
+
+  configure();
+
+  $connection = new SQLConnection();
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +16,12 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Env:</h1>
-  
+  <h1>Usuários</h1>
+  <?php 
+    $users = $connection->query("SELECT username FROM usuarios", []);
+  ?>
+  <?php foreach($users as $user):  ?>
+      <h2> <?= $user["username"] ?></h2>
+  <?php endforeach ?>
 </body>
 </html>

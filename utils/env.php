@@ -13,6 +13,7 @@
 
     $_ENV["CONFIGURED"] = true;
     print_r($_ENV);
+    echo "<br>";
   }
 
 ?>
