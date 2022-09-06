@@ -17,6 +17,7 @@
         $port     = DB_PORT;
         
         $dsn = "mysql:dbname=$schema;host=$host;port=$port";
+
         SQLConnection::$_con = new PDO($dsn, $user, $password);
       }
     }
