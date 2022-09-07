@@ -1,18 +1,9 @@
 <?php 
-  session_start();
   include_once("../configure.php"); 
-  include_once("../utils/error.php");
-  error_out("Tu é broxa KKKKKKKKK");
+  session_start();
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estacionamentos Porreta</title>
-</head>
-<body>
+
+<?php require("./partials/header.php"); ?>
     <h1>REGISTRAR</h1>
   <form action="../dao/register.php" method="POST">
     <label for="username">Nome de usuário:</label>
@@ -23,5 +14,4 @@
     
     <input type="submit" value="Login">
   </form>
-</body>
-</html>
+<?php require("./partials/footer.php"); ?>
