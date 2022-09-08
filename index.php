@@ -9,7 +9,8 @@
   <?php 
     if(isset($_SESSION["Error"])) {
       $error = $_SESSION["Error"];
-      echo "<button id='error'>$error</button>";
+      $type  = $_SESSION["Type"];
+      echo "<button class='message $type'>$error</button>";
       unset($_SESSION["Error"]);
     }
   ?>

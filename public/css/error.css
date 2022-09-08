@@ -1,5 +1,4 @@
-#error {
-    background-color: #ff4258;
+.message {
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.5rem;
@@ -20,7 +19,7 @@
     overflow: hidden;
 }
 
-#error::after {
+.message::after {
     content: "";
     position: absolute;
     left: 0;
@@ -30,7 +29,7 @@
     transition: opacity 100ms;
 
     filter: invert(1);
-    
+
     background-color: white;
     background-image: url("/public/assets/close.svg");
     background-position: center;
@@ -39,6 +38,14 @@
     opacity: 0.0;
 }
 
-#error:hover::after {
+.message:hover::after {
     opacity: 0.5;
+}
+
+.message.error {
+    background-color: #ff4258;
+}
+
+.message.error {
+    background-color: hsl(223, 100%, 63%);
 }
