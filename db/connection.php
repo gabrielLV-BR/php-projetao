@@ -1,5 +1,5 @@
 <?php
-include_once("../utils/env.php");
+require_once(__DIR__ . "/../utils/env.php");
 
 class SQLConnection
 {
@@ -15,19 +15,25 @@ class SQLConnection
       $user     = trim($_SESSION["Env"]["DB_USERNAME"]);
       $password = trim($_SESSION["Env"]["DB_PASSWORD"]);
 
-      $dsn = "mysql:dbname=$schema;host=$host;port=$port";
-
+      $dsn = "mysql:dbname=$schema;host=$host";
       SQLConnection::$_con = new PDO($dsn, $user, $password);
+
+      // Mudamos a coluna `senha` porque não tava muito bom não
+      $this->query("ALTER TABLE `estacionamento`.`usuarios` CHANGE COLUMN `password` `password` VARCHAR(60) NOT NULL;");
     }
   }
 
   function query(string $query, array $vars = [])
   {
-    $q = SQLConnection::$_con->query($query);
-    foreach ($vars as $key => $val) {
-      $q->bindValue($key, $val);
-    }
-    $q->execute();
-    return $q->fetchAll(PDO::FETCH_ASSOC);
+    // $q = SQLConnection::$_con->query($query);
+    // foreach ($vars as $key => $val) {
+    //   $q->bindValue($key, $val);
+    // }
+    // $q->execute();
+    // return $q->fetchAll(PDO::FETCH_ASSOC);
+    $query = str_replace("\n", "", $query);
+    $q = SQLConnection::$_con->prepare($query);
+    $q->execute($vars);
+    return $q->fetchAll();
   }
 }

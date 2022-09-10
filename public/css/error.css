@@ -46,6 +46,6 @@
     background-color: #ff4258;
 }
 
-.message.error {
+.message.msg {
     background-color: hsl(223, 100%, 63%);
 }

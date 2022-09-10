@@ -1,6 +1,6 @@
 <?php
-include_once("../configure.php");
 session_start();
+include_once("../configure.php");
 ?>
 
 <?php require("./partials/header.php"); ?>

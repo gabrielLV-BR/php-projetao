@@ -1,6 +1,6 @@
 <?php 
-  require_once("./configure.php"); 
   session_start(); 
+  require_once("./configure.php"); 
   $STYLESHEETS = array("error.css");
 ?>
 
@@ -8,13 +8,13 @@
 
   <?php 
     if(isset($_SESSION["Error"])) {
-      $error = $_SESSION["Error"];
-      $type  = $_SESSION["Type"];
+      $error = $_SESSION["Error"]["Message"];
+      $type  = $_SESSION["Error"]["Type"];
       echo "<button class='message $type'>$error</button>";
       unset($_SESSION["Error"]);
     }
   ?>
-  <script src="/public/js/error.js"></script>
+  <script defer src="/public/js/error.js"></script>
 
   <form action="./dao/login.php" method="POST">
     <label for="username">Nome de usuário:</label>

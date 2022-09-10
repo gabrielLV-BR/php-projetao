@@ -1,9 +1,8 @@
 <?php
-  include_once("./utils/env.php");
-  include_once("./db/connection.php");
+require_once(__DIR__ . "/utils/env.php");
+require_once(__DIR__ . "/db/connection.php");
 
-  if(!isset($_SESSION["CONFIGURED"])) {
-    load_env();
-    new SQLConnection();
-  }
+if(!isset($_SESSION["CONFIGURED"])) {
+  new SQLConnection();
+}
 ?>
