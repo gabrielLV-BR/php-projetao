@@ -15,7 +15,7 @@ class SQLConnection
       $user     = trim($_SESSION["Env"]["DB_USERNAME"]);
       $password = trim($_SESSION["Env"]["DB_PASSWORD"]);
 
-      $dsn = "mysql:dbname=$schema;host=$host";
+      $dsn = "mysql:dbname=$schema;host=$host;port=$port";
       SQLConnection::$_con = new PDO($dsn, $user, $password);
 
       // Mudamos a coluna `senha` porque não tava muito bom não

@@ -5,16 +5,7 @@
 ?>
 
 <?php include("./views/partials/header.php"); ?>
-
-  <?php 
-    if(isset($_SESSION["Error"])) {
-      $error = $_SESSION["Error"]["Message"];
-      $type  = $_SESSION["Error"]["Type"];
-      echo "<button class='message $type'>$error</button>";
-      unset($_SESSION["Error"]);
-    }
-  ?>
-  <script defer src="/public/js/error.js"></script>
+<?php include("./views/partials/error_viewer.php"); ?>
 
   <form action="./dao/login.php" method="POST">
     <label for="username">Nome de usuário:</label>
