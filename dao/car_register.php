@@ -46,11 +46,9 @@ error_out("Erro na conexão com o banco de dados");
 }
 
 if (is_array($res)) {
-  message_out("Veículo registrado com sucesso");
+  message_out("Veículo registrado com sucesso", "./car_entry.php");
 } else {
-  error_out("Erro ao registrar veículo");
+  error_out("Erro ao registrar veículo", "../views/home.php");
 }
-
-header("Location: ../views/home.php");
 die();
 ?>

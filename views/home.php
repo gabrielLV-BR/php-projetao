@@ -5,6 +5,7 @@ session_start();
 
 <?php require("./partials/header.php"); ?>
 
+<!-- //TODO Estilizar -->
 <h1>HOME</h1>
 <h2>Seja bem-vindo, <?= $_SESSION["username"]; ?></h2>
 

@@ -20,6 +20,12 @@ class SQLConnection
 
       // Mudamos a coluna `senha` porque não tava muito bom não
       $this->query("ALTER TABLE `estacionamento`.`usuarios` CHANGE COLUMN `password` `password` VARCHAR(60) NOT NULL;");
+      
+      $this->query("
+        ALTER TABLE `estacionamento`.`entrada_saida` 
+        CHANGE COLUMN `hr_entrada` `hr_entrada` DATETIME NOT NULL,
+        CHANGE COLUMN `hr_saida` `hr_saida` DATETIME NULL DEFAULT NULL ;
+      ");
     }
   }
 
@@ -31,7 +37,7 @@ class SQLConnection
     // }
     // $q->execute();
     // return $q->fetchAll(PDO::FETCH_ASSOC);
-    $query = str_replace("\n", "", $query);
+    $query = str_replace("\n", "", trim($query));
     $q = SQLConnection::$_con->prepare($query);
     $q->execute($vars);
     return $q->fetchAll();
