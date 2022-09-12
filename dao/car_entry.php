@@ -58,14 +58,17 @@ $time = date("Y-m-d H:i:s", $date->getTimestamp());
 
 if(!isset($_SESSION["Cars"])) { $_SESSION["Cars"] = []; }
 
-var_dump($_SESSION["Cars"]);
-die();
+echo "<pre>";
+print_r($_SESSION);
+echo "</pre><hr>";
 
-if(isset($_SESSION["Cars"][$id])) {
+echo "issset(\$_SESSION[\"Cars\"][\$id]) -> " . isset($_SESSION["Cars"][$id]) . "<br>";
+
+if(isset($_SESSION["Cars"][$id]) == 1) {
   // Está no estacionamento e agora vai sair
 
   $hr_entrada = $_SESSION["Cars"][$id]["hr_entrada"];
-  $hr_saida = $_SESSION["Cars"][$id]["hr_saida"];
+  $hr_saida = $date->getTimestamp();
 
   $preco = ($hr_saida - $hr_entrada) / 3600;
   
@@ -76,10 +79,12 @@ if(isset($_SESSION["Cars"][$id])) {
   
   // Remove do estacionamento
   unset($_SESSION["Cars"][$id]);
+  echo "issset(\$_SESSION[\"Cars\"][\$id]) -> " . isset($_SESSION["Cars"][$id]) . "<br>";
+  // die();
 } else {
   // Não está no estacionamento e agora vai entrar
   $_SESSION["Cars"][$id] = $veiculo[0];
-  $_SESSION["Cars"][$id]["hr_entrada"] = $time;
+  $_SESSION["Cars"][$id]["hr_entrada"] = $date->getTimestamp();
 }
 
 header("Location: ../views/home.php");

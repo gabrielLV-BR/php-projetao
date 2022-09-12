@@ -12,17 +12,19 @@
     <h1>Fabricante: <?= $fabricante ?></h1> 
 
     <?php 
-      if ( isset($_SESSION["Car"]["custo"]) ) { 
+      echo "<pre>";
+      print_r($_SESSION["Car"]);
+      echo "</pre>";
+      if ( isset($_SESSION["Car"]["hr_saida"]) ) { 
         $hr_entrada = date("H:i:s", $_SESSION["Car"]["hr_entrada"]);
         $hr_saida = date("H:i:s", $_SESSION["Car"]["hr_saida"]);
-        $preco = $_SESSION["Car"]["custo"];
+        $preco = $_SESSION["Car"]["preco"];
     ?>
       <hr>
       <h2>Horário de entrada: <?= $hr_entrada ?></h2>
       <h2>Horário de saída: <?= $hr_saida ?></h2>
       <h2>Total: <?= $preco ?></h2>
     <?php } ?>
-
   </div>
 <?php
 
