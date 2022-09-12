@@ -9,13 +9,20 @@ print_r($_POST);
 
 <h1>REGISTRAR VEÍCULO</h1>
 <form action="../dao/car_register.php" method="POST">
-  <label for="username">Nome de usuário:</label>
-  <input required type="text"  name="username" id="username"><br>
 
-  <label for="password">Senha</label>
-  <input required type="password" name="password" id="password"><br>
+  <label for="placa">Placa</label>
+  <input type="text" name="placa" id="placa">
 
-  <input type="submit" value="Login">
+  <label for="fabricante">Fabricante</label>
+  <input type="text" name="fabricante" id="fabricante">
+
+  <label for="modelo">Modelo</label>
+  <input type="text" name="modelo" id="modelo">
+
+  <label for="cor">Cor</label>
+  <input type="text" name="cor" id="cor">
+
+  <input type="submit" value="Registrar">
 </form>
 
 <?php require("./partials/footer.php"); ?>

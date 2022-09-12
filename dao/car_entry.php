@@ -20,19 +20,19 @@ set_exception_handler(function($e) {
   die();
 });
 
-$res = $connection->query(
+$veiculo = $connection->query(
   "SELECT * FROM veiculos WHERE placa = :placa;",
   [ ":placa" => $placa ]
 );
 
-if(is_array($res) && count($res) == 0) {
+if(is_array($veiculo) && count($veiculo) == 0) {
   // Veículo não cadastrado
   header("Location: ../views/car_register.php");
   die();
 }
 
 // impossível da query não retornar nada
-$id = $res[0]["id"];
+$id = $veiculo[0]["id"];
 echo $id;
 
 $res = $connection->query(
@@ -40,15 +40,12 @@ $res = $connection->query(
   [ ":id" => $placa ]
 );
 
-//TODO Mostrar informações do veículo na página HOME
 if(is_array($res) && count($res) == 0) {
   // Se o veículo estiver entrando...
   $connection->query(
     "INSERT INTO entrada_saida (veiculo, hr_entrada) VALUES (:id, now());",
     [ ":id" => $id ]
   );
-
-
 } else {
   // Se estiver saindo...
   $res = $connection->query(
@@ -56,5 +53,8 @@ if(is_array($res) && count($res) == 0) {
     [ ":id" => $id]
   );
 }
+
+$_SESSION["Car"] = $veiculo[0];
+header("Location: ../views/home.php");
 
 ?>
