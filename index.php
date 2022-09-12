@@ -1,11 +1,10 @@
 <?php 
-  session_start(); 
-  require_once("./configure.php"); 
+  session_start();
   $STYLESHEETS = array("error.css");
 ?>
 
-<?php include("./views/partials/header.php"); ?>
-<?php include("./views/partials/error_viewer.php"); ?>
+<?php include("./views/components/header.php"); ?>
+<?php include("./views/components/error_viewer.php"); ?>
 
   <form action="./dao/login.php" method="POST">
     <label for="username">Nome de usuário:</label>
@@ -19,4 +18,4 @@
   <a href="./views/forgot.php">Esqueceu a senha?</a><br>
   <a href="./views/register.php">Criar conta</a>
 
-<?php require("./views/partials/footer.php"); ?>
+<?php require("./views/components/footer.php"); ?>

@@ -1,11 +1,8 @@
 <?php
 session_start();
-include_once("../configure.php");
-
-print_r($_POST);
 ?>
 
-<?php require("./partials/header.php"); ?>
+<?php require("./components/header.php"); ?>
 
 <h1>REGISTRAR VEÍCULO</h1>
 <form action="../dao/car_register.php" method="POST">
@@ -25,4 +22,4 @@ print_r($_POST);
   <input type="submit" value="Registrar">
 </form>
 
-<?php require("./partials/footer.php"); ?>
+<?php require("./components/footer.php"); ?>

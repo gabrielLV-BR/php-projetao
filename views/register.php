@@ -1,9 +1,8 @@
 <?php
 session_start();
-include_once("../configure.php");
 ?>
 
-<?php require("./partials/header.php"); ?>
+<?php require("./components/header.php"); ?>
 
 <h1>REGISTRAR</h1>
 <form action="../dao/register.php" method="POST">
@@ -16,4 +15,4 @@ include_once("../configure.php");
   <input type="submit" value="Login">
 </form>
 
-<?php require("./partials/footer.php"); ?>
+<?php require("./components/footer.php"); ?>
