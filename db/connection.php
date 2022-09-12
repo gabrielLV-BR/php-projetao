@@ -7,15 +7,16 @@ class SQLConnection
   function __construct()
   {
     if (SQLConnection::$_con == null) {
-      if (session_status() != PHP_SESSION_ACTIVE) session_start();
-      if (!isset($_SESSION["CONFIGURED"])) load_env();
+      session_start();
+      load_env();
       $host     = trim($_SESSION["Env"]["DB_HOST"] ?? "localhost");
       $port     = trim($_SESSION["Env"]["DB_PORT"] ?? "3306");
       $schema   = trim($_SESSION["Env"]["DB_SCHEMA"]);
       $user     = trim($_SESSION["Env"]["DB_USERNAME"]);
       $password = trim($_SESSION["Env"]["DB_PASSWORD"]);
 
-      $dsn = "mysql:dbname=$schema;host=$host;port=$port";
+      $dsn = "mysql:dbname=$schema;host=$host";
+
       SQLConnection::$_con = new PDO($dsn, $user, $password);
 
       // Mudamos a coluna `senha` porque não tava muito bom não

@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `estacionamento` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE  IF NOT EXISTS `estacionamento`;
 USE `estacionamento`;
 
 
@@ -16,7 +16,7 @@ CREATE TABLE `veiculos` (
   `cor` varchar(45) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `placa` (`placa`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2;
 
 
 --
@@ -43,7 +43,7 @@ CREATE TABLE `entrada_saida` (
   PRIMARY KEY (`id`),
   KEY `fk_entrada_saida_1_idx` (`veiculo`),
   CONSTRAINT `fk_entrada_saida_1` FOREIGN KEY (`veiculo`) REFERENCES `veiculos` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB;
 
 
 --
@@ -66,7 +66,7 @@ CREATE TABLE `usuarios` (
   `password` varchar(6) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2;
 
 
 --
