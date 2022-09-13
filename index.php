@@ -9,10 +9,10 @@
 <main class="container">
   <form action="./actions/login.php" method="POST">
     <label for="username">Nome de usuário:</label>
-    <input class="form-control" type="text" name="username" id="username"><br>
+    <input required class="form-control" type="text" name="username" id="username"><br>
     
     <label for="password">Senha</label>
-    <input type="password" name="password" id="password"><br>
+    <input required type="password" name="password" id="password"><br>
     
     <input type="submit" value="Login">
   </form>

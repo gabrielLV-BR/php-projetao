@@ -19,3 +19,15 @@
   ?>
 </head>
 <body>
+<header id="header">
+  <span>
+    <a class="home" href="/views/home.php">Home</a>
+  </span>
+  <span>
+    <ul>
+      <li><a href="/views/car_register.php">Registrar Veículo</a></li>
+      <li><a href="/views/car_listing.php">Histórico</a></li>
+      <li><a href="https://www.google.com/search?q=Hospital+mais+pr%C3%B3ximo">Ajuda</a></li>
+    </ul>
+  </span>
+</header>

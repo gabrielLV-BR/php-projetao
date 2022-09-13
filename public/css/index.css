@@ -4,15 +4,9 @@
     justify-content: center;
 }
 
-.container {
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
 .container form {
     gap: 0.4rem;
-    width: 25vw;
+    width: 25%;
     min-width: 20rem;
 }
 

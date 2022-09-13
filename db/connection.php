@@ -33,12 +33,6 @@ class SQLConnection
 
   function query(string $query, array $vars = [])
   {
-    // $q = SQLConnection::$_con->query($query);
-    // foreach ($vars as $key => $val) {
-    //   $q->bindValue($key, $val);
-    // }
-    // $q->execute();
-    // return $q->fetchAll(PDO::FETCH_ASSOC);
     $query = str_replace("\n", "", trim($query));
     $q = SQLConnection::$_con->prepare($query);
     $q->execute($vars);

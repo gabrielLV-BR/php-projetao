@@ -1,0 +1,52 @@
+#header {
+    display: block;
+    width: 100%;
+
+    margin: 0;
+    padding: 2rem 2.5rem;
+    height: 10%;
+
+    background-color: #545454;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    color: white;
+    justify-content: space-between;
+
+
+    z-index: 2;
+}
+
+#header > span > ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+#header > span ul li {
+    position: relative;
+}
+
+#header > span ul li:not(:first-of-type)::before {
+    content: "";
+
+    position: absolute;
+    left: -1rem;
+    top: 0;
+    
+    display: block;
+    width: 2px;
+    height: 20px;
+    background-color: white;
+}
+
+#header a {
+    color: white;
+}
+
+#header .home {
+    font-size: 2rem;
+}

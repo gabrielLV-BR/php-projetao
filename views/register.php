@@ -1,5 +1,8 @@
 <?php
 session_start();
+
+require_once("../verify.php");
+
 $STYLESHEETS = array("register.css");
 ?>
 

@@ -1,8 +1,23 @@
 #footer {
     display: block;
-    width: 100vw;
+    width: 100%;
     margin: 0;
-    padding: 0;
-    height: 10vh;
+    padding: 2rem 2.5rem;
+    height: 10%;
     background-color: #545454;
+
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+
+    z-index: 2;
+
+    margin: -2px;
+}
+
+#footer a {
+    color: white;
 }
