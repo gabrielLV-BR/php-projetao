@@ -6,7 +6,7 @@
 <?php include("./views/components/header.php"); ?>
 <?php include("./views/components/error_viewer.php"); ?>
 
-  <form action="./dao/login.php" method="POST">
+  <form action="./actions/login.php" method="POST">
     <label for="username">Nome de usuário:</label>
     <input type="text" name="username" id="username"><br>
 

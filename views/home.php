@@ -8,7 +8,11 @@
 
 <?php require("./components/car_viewer.php") ?>
 
-<form action="../dao/car_entry.php" method="POST">
+<h1 class="text-3xl font-bold underline">
+  Hello world!
+</h1>
+
+<form action="../actions/car_entry.php" method="POST">
 
   <label for="placa">Placa do veículo</label>
   <input type="text" name="placa" id="placa">
@@ -17,6 +21,6 @@
 
 </form>
 
-<a href="../dao/logout.php">Logout</a>
+<a href="../actions/logout.php">Logout</a>
 
 <?php require("./components/footer.php"); ?>

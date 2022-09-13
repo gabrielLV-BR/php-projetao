@@ -5,7 +5,7 @@ session_start();
 <?php require("./components/header.php"); ?>
 
 <h1>REGISTRAR VEÍCULO</h1>
-<form action="../dao/car_register.php" method="POST">
+<form action="../actions/car_register.php" method="POST">
 
   <label for="placa">Placa</label>
   <input type="text" name="placa" id="placa">

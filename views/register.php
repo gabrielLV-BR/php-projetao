@@ -5,7 +5,7 @@ session_start();
 <?php require("./components/header.php"); ?>
 
 <h1>REGISTRAR</h1>
-<form action="../dao/register.php" method="POST">
+<form action="../actions/register.php" method="POST">
   <label for="username">Nome de usuário:</label>
   <input required type="text"  name="username" id="username"><br>
 
