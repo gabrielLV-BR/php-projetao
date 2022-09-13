@@ -1,0 +1,8 @@
+#footer {
+    display: block;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    height: 10vh;
+    background-color: #545454;
+}

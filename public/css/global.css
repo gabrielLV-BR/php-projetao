@@ -8,7 +8,8 @@ html, body {
     margin: 0;
     width: 100vw;
     height: 100vh;
-    overflow: none;
+    overflow-x: none;
+    overflow-y: auto;
 }
 
 button, input[type=submit] {
@@ -41,9 +42,15 @@ input {
     border-radius: 0.2rem;
     border: 1px solid #00000050;
     padding: 0.4rem;
+    display: block;
 }
 
 input:focus {
     outline-color: #00000080;
 }
 
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

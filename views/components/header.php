@@ -7,6 +7,8 @@
   <link rel="icon" href="/public/favicon.svg" sizes="any" type="image/svg+xml">
 
   <link rel="stylesheet" href="/public/css/global.css">
+  <link rel="stylesheet" href="/public/css/header.css">
+  <link rel="stylesheet" href="/public/css/footer.css">
 
   <title>Estacionamentos Porreta | Guardamos seu carro e etc.</title>
   <?php 
