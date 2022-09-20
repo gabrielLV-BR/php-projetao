@@ -12,10 +12,29 @@
 
 .container .row {
     flex-direction: row;
+    gap: 4rem;
 }
 
-.container form * {
-    font-size: 2rem;
+
+.container .row .car-viewer {
+    position: relative;
+}
+
+.container .row .car-viewer::before {
+    content: "";
+
+    position: absolute;
+    left: -2rem;
+    top: -5%;
+
+    display: block;
+    width: 2px;
+    height: 110%;
+    background-color: #00000050;
+}
+
+.container form *:not(input[type=submit]) {
+    font-size: 1.7rem;
 }
 
 .row > section {
@@ -37,4 +56,8 @@
 
 input#placa {
     text-transform: uppercase;
+}
+
+.logout {
+    font-size: 1.5rem;
 }

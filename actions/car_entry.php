@@ -2,7 +2,6 @@
 session_start();
 require_once("../utils/message.php");
 require_once("../db/connection.php");
-
 require_once("../dao/vehicle.php");
 
 if(
@@ -26,13 +25,13 @@ if($veiculo == null) {
   die();
 }
 
-$_SESSION["Car"] = $veiculo;
-
 $time = date("Y-m-d H:i:s", $date->getTimestamp());
 
+$_SESSION["Car"] = $veiculo;
+$id = $veiculo["id"];
 if(!isset($_SESSION["Cars"])) { $_SESSION["Cars"] = []; }
 
-if(isset($_SESSION["Cars"][$id]) == 1) {
+if(isset($_SESSION["Cars"][$id]) == true) {
   // Está no estacionamento e agora vai sair
   car_out($veiculo);
 } else {
@@ -41,5 +40,5 @@ if(isset($_SESSION["Cars"][$id]) == 1) {
 }
 
 header("Location: ../views/home.php");
-
+die();
 ?>

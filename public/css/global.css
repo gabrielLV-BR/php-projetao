@@ -17,10 +17,11 @@ body {
 }
 
 button, input[type=submit] {
-    padding: 0.2rem;
+    padding: 0.8rem 0;
     border: none;
-    background-color: rgb(252, 224, 70);
-    font-size: 1.2rem;
+    background-color: rgb(70, 252, 109);
+    color: #202020;
+    font-size: 1.3rem;
 }
 
 button, a, input[type=submit] {

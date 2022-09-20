@@ -3,13 +3,14 @@ session_start();
 
 require_once("../verify.php");
 
-$STYLESHEETS = array("home.css");
+$STYLESHEETS = array("home.css", "car_viewer.css", "error.css");
 ?>
 
 <?php require("./components/header.php"); ?>
+<?php require("./components/error_viewer.php"); ?>
 
 <div class="container">
-  <h1 class="welcome">Bem vindo, <?= $_SESSION["username"] ?></h1>
+  <h1 class="welcome">Bem vindo, <i><?= $_SESSION["username"] ?></i></h1>
   <span class="row">
     <section class="inputs">
       <hr>

@@ -1,4 +1,5 @@
 <?php 
+  session_start();
   require_once("../db/connection.php");
 
   $date = new DateTime();
@@ -43,7 +44,7 @@
     
     // Remove do estacionamento
     unset($_SESSION["Cars"][$id]);
-    echo "issset(\$_SESSION[\"Cars\"][\$id]) -> " . isset($_SESSION["Cars"][$id]) . "<br>";
+    // echo "issset(\$_SESSION[\"Cars\"][\$id]) -> " . isset($_SESSION["Cars"][$id]) . "<br>";
     // die();
   }
 

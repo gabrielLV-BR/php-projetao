@@ -1,0 +1,46 @@
+.car-viewer, 
+.car-viewer span.left,
+.car-viewer span.right {
+    display: flex;
+    justify-content: center;
+}
+
+.car-viewer {
+    background-color: #d0d0d0;
+    width: 30vw;
+    padding: 1.8rem 2.2rem;
+    border-radius: 0.4rem;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.car-viewer span.left {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.car-viewer span.right {
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.car-viewer label {
+    font-size: small;
+    color: #808080;
+    display: block;
+}
+
+.car-viewer p {
+    font-size: larger;
+    color: #454545;
+    display: block;
+
+    margin-top: 0.2rem;
+    margin-bottom: 0.7rem;
+}
+
+.car-viewer span.right img {
+    height: 100px;
+}

@@ -1,19 +1,17 @@
 <?php
 session_start();
 
-require_once("../verify.php");
-
 $STYLESHEETS = array("register.css");
 ?>
 
 <?php require("./components/header.php"); ?>
 
 <div class="container">
-    <h1>REGISTRAR</h1>
+  <h1>REGISTRAR</h1>
   <form action="../actions/register.php" method="POST">
     <label for="username">Nome de usuário:</label>
-    <input required type="text"  name="username" id="username"><br>
-    
+    <input required type="text" name="username" id="username"><br>
+
     <label for="password">Senha</label>
     <input required type="password" name="password" id="password"><br>
 
