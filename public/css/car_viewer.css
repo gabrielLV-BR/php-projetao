@@ -7,7 +7,11 @@
 
 .car-viewer {
     background-color: #d0d0d0;
+    
     width: 30vw;
+    min-width: 20rem;
+    max-width: 28rem;
+
     padding: 1.8rem 2.2rem;
     border-radius: 0.4rem;
 
@@ -41,6 +45,29 @@
     margin-bottom: 0.7rem;
 }
 
+.car-viewer .car {
+    width: 11rem;
+    height: 6rem;
+    position: relative;
+}
+
+.car-viewer .car svg {
+    position: absolute;
+    fill: pink;
+}
+
 .car-viewer span.right img {
-    height: 100px;
+    height: 100%;
+}
+
+@media screen and (max-width: 1110px) {
+  .car-viewer {
+    padding: 1.4rem 0.5rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .car-viewer {
+    padding: 1.8rem 2.2rem;
+  }
 }

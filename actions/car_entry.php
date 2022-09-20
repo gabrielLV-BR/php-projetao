@@ -4,9 +4,14 @@ require_once("../utils/message.php");
 require_once("../db/connection.php");
 require_once("../dao/vehicle.php");
 
-if(
-  !isset($_POST["placa"])
-) {
+$placa = "";
+
+if(isset($_POST["placa"])) {
+  $placa = $_POST["placa"];
+} else if (isset($_SESSION["placa"])) {
+  $placa = $_SESSION["placa"];
+  unset($_SESSION["placa"]);
+} else {
   error_out("Por favor, informe a placa", "../views/home.php");
   die();
 }
@@ -17,7 +22,7 @@ set_exception_handler(function($e) {
   die();
 });
 
-$veiculo = get_vehicle(trim($_POST["placa"]));
+$veiculo = get_vehicle(trim($placa));
 
 if($veiculo == null) {
   // Veículo não cadastrado

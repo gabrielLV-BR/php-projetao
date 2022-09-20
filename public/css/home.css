@@ -59,5 +59,25 @@ input#placa {
 }
 
 .logout {
-    font-size: 1.5rem;
+    color: rgb(97, 145, 207);
+    font-size: 1.3rem;
+}
+
+@media screen and (max-width: 950px) {
+  .row {
+    flex-direction: column !important;
+  }
+
+  .container .row .car-viewer::before {
+    content: "";
+
+    position: absolute;
+    left: -5%;
+    top: -2rem;
+
+    display: block;
+    width: 110%;
+    height: 2px;
+    background-color: #00000050;
+  }
 }

@@ -20,6 +20,18 @@
     return $veiculo[0];
   }
 
+  function register_vehicle(string $placa, string $fabricante, string $modelo, string $cor) {
+    $con = new SQLConnection();
+
+    $res = $con->query(
+      "INSERT INTO veiculos (placa, fabricante, modelo, cor) VALUES (:placa, :fabricante, :modelo, :cor);",
+      [ ":placa"  => $placa , ":fabricante" => $fabricante,
+        ":modelo" => $modelo, ":cor" => $cor ]
+    );
+
+    return is_array($res) && count($res) == 0;
+  }
+
   function car_in($veiculo) {
     global $date;
     $id = $veiculo["id"];
