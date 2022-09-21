@@ -2,9 +2,8 @@
     display: block;
     width: 100%;
     margin: 0;
-    padding: 2rem 2.5rem;
-    height: 10%;
-    background-color: #545454;
+    padding: 1rem 1.5rem;
+    background-color: dodgerblue;
 
     color: white;
     display: flex;

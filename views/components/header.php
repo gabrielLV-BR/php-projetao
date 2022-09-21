@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -25,8 +26,10 @@
   </span>
   <span>
     <ul>
+      <?php if(isset($_SESSION["username"])): ?> 
       <li><a href="/views/car_register.php">Registrar Veículo</a></li>
       <li><a href="/views/car_listing.php">Histórico</a></li>
+      <?php endif ?>
       <li><a href="https://www.google.com/search?q=Hospital+mais+pr%C3%B3ximo">Ajuda</a></li>
     </ul>
   </span>

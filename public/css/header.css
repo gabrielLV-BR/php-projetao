@@ -1,21 +1,36 @@
 #header {
+    position: relative;
     display: block;
     width: 100%;
 
     margin: 0;
     padding: 2rem 2.5rem;
-    height: 10%;
 
-    background-color: #545454;
     display: flex;
     flex-direction: row;
     align-items: center;
-    
-    color: white;
     justify-content: space-between;
 
+    background-color: white;
+    color: #202020;
 
     z-index: 2;
+}
+
+#header::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 90%;
+    height: 2px;
+
+    /* Dá um efeito de degradê nos cantos */
+    border-radius: 50%;
+
+    left: 5%;
+    bottom: 0;
+
+    background-color: dodgerblue;
 }
 
 #header > span > ul {
@@ -40,11 +55,11 @@
     display: block;
     width: 2px;
     height: 20px;
-    background-color: white;
+    background-color: dodgerblue;
 }
 
 #header a {
-    color: white;
+    color: #202020;
 }
 
 #header .home {
