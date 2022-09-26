@@ -12,7 +12,10 @@
 
 .container .row {
     flex-direction: row;
-    gap: 4rem;
+}
+
+.container .row * {
+    margin: 0 0.5rem;
 }
 
 .container .row .car-viewer {
@@ -23,7 +26,7 @@
     content: "";
 
     position: absolute;
-    left: -2rem;
+    left: -1rem;
     top: -5%;
 
     display: block;
@@ -58,6 +61,10 @@ input#placa {
 }
 
 .logout {
+    margin-top: 3rem;
+}
+
+.logout a {
     color: rgb(97, 145, 207);
     font-size: 1.3rem;
 }

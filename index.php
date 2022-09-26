@@ -1,6 +1,11 @@
 <?php 
   session_start();
   $STYLESHEETS = array("error.css", "index.css");
+
+  if(isset($_SESSION["username"])) {
+    header("Location: views/home.php");
+    die();
+  }
 ?>
 
 <?php include("./views/components/header.php"); ?>

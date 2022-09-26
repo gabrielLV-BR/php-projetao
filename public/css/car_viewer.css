@@ -1,6 +1,7 @@
 .car-viewer, 
 .car-viewer span.left,
 .car-viewer span.right {
+    margin: 0 !important;
     display: flex;
     justify-content: center;
 }
@@ -8,7 +9,7 @@
 .car-viewer {
     background-color: #d0d0d0;
     
-    width: 30vw;
+    width: 36vw;
     min-width: 20rem;
     max-width: 28rem;
 

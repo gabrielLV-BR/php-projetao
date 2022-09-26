@@ -4,10 +4,6 @@
     overflow-x: none;
 }
 
-html {
-    height: 100vh;
-}
-
 body {
     padding: 0;
     margin: 0;
@@ -18,7 +14,7 @@ body {
     flex-direction: column;
     align-items: center;
 
-    height: calc(100% - 5px);
+    height: calc(100% - 2px);
     justify-content: space-between;
 }
 

@@ -37,7 +37,11 @@
     $id = $veiculo["id"];
 
     $_SESSION["Cars"][$id] = $veiculo;
-    $_SESSION["Cars"][$id]["hr_entrada"] = $date->getTimestamp();
+    
+    $timestamp = $date->getTimestamp();
+
+    $_SESSION["Cars"][$id]["hr_entrada"] = $timestamp;
+    $_SESSION["Car"]["hr_entrada"] = $timestamp;
   }
 
   function car_out($veiculo) {
@@ -49,6 +53,7 @@
   
     $preco = ($hr_saida - $hr_entrada) / 3600;
     
+    $_SESSION["Car"]["hr_entrada"] = $hr_entrada;
     $_SESSION["Car"]["hr_saida"] = $hr_saida;
     $_SESSION["Car"]["preco"] = $preco;
     

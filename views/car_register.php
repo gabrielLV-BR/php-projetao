@@ -12,7 +12,7 @@ $STYLESHEETS = array("car_register.css");
   <form action="../actions/car_register.php" method="POST">
 
     <label for="placa">Placa</label>
-    <input type="text" name="placa" id="placa">
+    <input type="text" name="placa" id="placa" value="<?= $_SESSION["placa"] ?? "" ?>">
     
     <label for="fabricante">Fabricante</label>
     <input type="text" name="fabricante" id="fabricante">

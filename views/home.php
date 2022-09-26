@@ -20,13 +20,11 @@ $STYLESHEETS = array("home.css", "car_viewer.css", "error.css");
 
         <input type="submit" value="Enviar">
     </section>
-    <section class="viewer">
-      <?php require("./components/car_viewer.php") ?>
-    </section>
+    <?php require("./components/car_viewer.php") ?>
     </form>
   </span>
-  <span>
-    <a href="../actions/logout.php" class="logout">Logout</a>
+  <span class="logout">
+    <a href="../actions/logout.php">Logout</a>
   </span>
 </div>
 

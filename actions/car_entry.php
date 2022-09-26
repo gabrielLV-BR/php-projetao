@@ -16,16 +16,19 @@ if(isset($_POST["placa"])) {
   die();
 }
 
+$placa = trim($placa);
+
 $connection = new SQLConnection();
 set_exception_handler(function($e) {
   error_out($e);
   die();
 });
 
-$veiculo = get_vehicle(trim($placa));
+$veiculo = get_vehicle($placa);
 
 if($veiculo == null) {
   // Veículo não cadastrado
+  $_SESSION["placa"] = $placa;
   header("Location: ../views/car_register.php");
   die();
 }
