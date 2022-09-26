@@ -32,6 +32,17 @@
     return is_array($res) && count($res) == 0;
   }
 
+  function registrar_saida($veiculo, $hr_entrada, $hr_saida) {
+    $con = new SQLConnection();
+
+    $res = $con->query(
+      "INSERT INTO entrada_saida (veiculo, hr_entrada, hr_saida) VALUES (:veiculo, :hr_entrada, :hr_saida);",
+      [ ":veiculo" =>  $veiculo, ":hr_entrada" => $hr_entrada, ":hr_saida" => $hr_saida ]
+    );
+
+    return is_array($res) && count($res) == 0;
+  }
+
   function car_in($veiculo) {
     global $date;
     $id = $veiculo["id"];
@@ -57,12 +68,11 @@
     $_SESSION["Car"]["hr_saida"] = $hr_saida;
     $_SESSION["Car"]["preco"] = $preco;
     
-    //TODO Atualiza banco
-    
     // Remove do estacionamento
     unset($_SESSION["Cars"][$id]);
-    // echo "issset(\$_SESSION[\"Cars\"][\$id]) -> " . isset($_SESSION["Cars"][$id]) . "<br>";
-    // die();
+
+    //TODO Atualiza banco
+    registrar_saida($id, $hr_entrada, $hr_saida);
   }
 
 ?>
