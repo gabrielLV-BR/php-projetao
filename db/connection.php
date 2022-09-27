@@ -7,7 +7,7 @@ class SQLConnection
   function __construct()
   {
     if (SQLConnection::$_con == null) {
-      session_start();
+      if(session_status() != PHP_SESSION_ACTIVE) session_start();;
       if (!isset($_SESSION["Configured"])) load_env();
 
       $host     = trim($_SESSION["Env"]["DB_HOST"] ?? "localhost");

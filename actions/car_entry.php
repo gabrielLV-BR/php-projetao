@@ -1,5 +1,5 @@
 <?php 
-session_start();
+if(session_status() != PHP_SESSION_ACTIVE) session_start();;
 require_once("../utils/message.php");
 require_once("../db/connection.php");
 require_once("../dao/vehicle.php");
@@ -32,8 +32,6 @@ if($veiculo == null) {
   header("Location: ../views/car_register.php");
   die();
 }
-
-$time = date("Y-m-d H:i:s", $date->getTimestamp());
 
 $_SESSION["Car"] = $veiculo;
 $id = $veiculo["id"];

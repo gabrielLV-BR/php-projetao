@@ -1,0 +1,63 @@
+.container {
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+}
+
+.container > h1 {
+    align-self: flex-start;
+    margin-right: auto;
+    margin-left: 10vw;    
+}
+
+.container > h2 {
+    align-self: flex-start;
+    margin-right: auto;
+    margin-left: 20vw;    
+}
+
+.container > h2 {
+    margin-bottom: 0.2rem;
+}
+
+.container ul {
+    width: 80%;
+    min-width: 22.5rem;
+    display: flex;
+    align-items: cente;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container ul > h2 {
+    border-radius: 0.4rem;
+    padding: 0.5rem 2rem;
+    margin: 0;
+    color: white;
+    background-color: #ff3050;
+}
+
+.container ul li {
+    list-style: none;
+    box-shadow: 0 0 5px #00000020;
+    background-color: #00000010;
+    border-radius: 0.5rem;
+
+    padding: 1rem 2rem;
+    margin: 0.5rem 0.2rem;
+}
+
+.container ul li p {
+    margin: 0.2rem;
+}
+
+.container ul p.placa {
+    text-transform: uppercase;
+}
+
+.container ul p small {
+    color: dodgerblue;
+    margin-right: 0.8rem;   
+    text-transform: lowercase;
+}

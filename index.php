@@ -1,5 +1,5 @@
 <?php 
-  session_start();
+  if(session_status() != PHP_SESSION_ACTIVE) session_start();;
   $STYLESHEETS = array("error.css", "index.css");
 
   if(isset($_SESSION["username"])) {
