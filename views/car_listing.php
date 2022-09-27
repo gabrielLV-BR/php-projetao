@@ -1,5 +1,5 @@
 <?php 
-    if(session_status() != PHP_SESSION_ACTIVE) session_start();;
+    if(session_status() != PHP_SESSION_ACTIVE) session_start();
     require_once("../verify.php");
     require_once("../dao/vehicle.php");
     
@@ -11,9 +11,6 @@
     function get_car_html($car, $status) {
         $placa = $car["placa"];
         $modelo = $car["modelo"];
-        $fabricante = $car["fabricante"];
-        $cor = $car["cor"];
-
         ?> 
         <li>
             <p class="placa"><small>placa</small><?= $placa ?></p>

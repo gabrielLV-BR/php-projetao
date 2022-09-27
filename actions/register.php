@@ -1,5 +1,5 @@
 <?php 
-if(session_status() != PHP_SESSION_ACTIVE) session_start();;
+if(session_status() != PHP_SESSION_ACTIVE) session_start();
 require_once("../utils/message.php");
 require_once("../db/connection.php");
 

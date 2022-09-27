@@ -1,5 +1,5 @@
 <?php 
-  if(session_status() != PHP_SESSION_ACTIVE) session_start();;
+  if(session_status() != PHP_SESSION_ACTIVE) session_start();
   require_once("../db/connection.php");
 
   define("MYSQL_TIME", "Y-m-d H:i:s");
