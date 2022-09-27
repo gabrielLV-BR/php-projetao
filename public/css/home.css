@@ -69,6 +69,11 @@ input#placa {
     font-size: 1.3rem;
 }
 
+#placa:invalid {
+    background-color: #ef303060;
+}
+
+
 @media screen and (max-width: 950px) {
   .row {
     flex-direction: column !important;

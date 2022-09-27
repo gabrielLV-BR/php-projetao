@@ -17,4 +17,9 @@
 
 #placa {
     text-transform: uppercase;
+    text-transform: uppercase;
+}
+
+#placa:invalid {
+    background-color: #ef303060;
 }

@@ -16,8 +16,8 @@ $STYLESHEETS = array("home.css", "car_viewer.css", "error.css");
       <hr>
       <form action="../actions/car_entry.php" method="POST">
         <label for="placa">Placa do veículo</label>
-        <input type="text" name="placa" id="placa" maxlength="7" required>
-
+        <input type="text" name="placa" id="placa" pattern="[A-z]{3}\d{4}" placeholder="ABC1234" maxlength="7" required>
+        <small style="font-size: 0.9rem; font-style: italic;">A placa deve seguir o padrão</small>
         <input type="submit" value="Enviar">
     </section>
     <?php require("./components/car_viewer.php") ?>

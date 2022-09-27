@@ -12,7 +12,8 @@ $STYLESHEETS = array("car_register.css");
   <form action="../actions/car_register.php" method="POST">
 
     <label for="placa">Placa</label>
-    <input type="text" name="placa" id="placa" value="<?= $_SESSION["placa"] ?? "" ?>">
+    <input type="text" name="placa" id="placa" pattern="[A-z]{3}\d{4}" placeholder="ABC1234" maxlength="7" value="<?= $_SESSION["placa"] ?? "" ?>">
+    <small style="font-size: 0.9rem; font-style: italic;">A placa deve seguir o padrão</small>
     
     <label for="fabricante">Fabricante</label>
     <input type="text" name="fabricante" id="fabricante">
