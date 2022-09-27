@@ -44,7 +44,9 @@
     $estadias = [];
     foreach($_SESSION["Cars"] as $id => $car) {
       $veiculo = get_vehicle_by_id($id);
-      $estadias[] = array(...$veiculo, ...$car);
+      if(is_array($veiculo) && is_array($car)) {
+        $estadias[] = array(...$veiculo, ...$car);
+      }
     }
 
     return $estadias;
