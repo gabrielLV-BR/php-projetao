@@ -23,6 +23,7 @@ class SQLConnection
       // Mudamos a coluna `senha` porque não tava muito bom não
       $this->query("ALTER TABLE `estacionamento`.`usuarios` CHANGE COLUMN `password` `password` VARCHAR(60) NOT NULL;");
       
+      // Mudamos o tipo de variável do hr_saida e hr_entrada
       $this->query("
         ALTER TABLE `estacionamento`.`entrada_saida` 
         CHANGE COLUMN `hr_entrada` `hr_entrada` DATETIME NOT NULL,
