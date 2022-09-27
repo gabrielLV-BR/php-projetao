@@ -69,7 +69,7 @@ input#placa {
     font-size: 1.3rem;
 }
 
-#placa:invalid {
+#placa:invalid:focus  {
     background-color: #ef303060;
 }
 

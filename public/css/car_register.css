@@ -20,6 +20,6 @@
     text-transform: uppercase;
 }
 
-#placa:invalid {
+#placa:invalid:focus {
     background-color: #ef303060;
 }
