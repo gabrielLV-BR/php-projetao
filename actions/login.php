@@ -11,6 +11,7 @@ if (
   die();
 }
 
+// trim() -> Remove espaços inúteis antes e depois
 $username = trim($_POST["username"]);
 $password = trim($_POST["password"]);
 

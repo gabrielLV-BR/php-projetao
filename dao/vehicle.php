@@ -55,7 +55,7 @@
   function get_saidas() {
     $con = new SQLConnection();
 
-    $saidas = $con->query("SELECT * FROM entrada_saida e, veiculos v WHERE e.veiculo = v.id;");
+    $saidas = $con->query("SELECT * FROM entrada_saida e, veiculos v WHERE e.veiculo = v.id ORDER BY hr_entrada;");
     $resultados = [];
     foreach ($saidas as $id => $car) {
       $car["hr_saida"] = strtotime($car["hr_saida"]);

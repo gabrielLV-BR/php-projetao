@@ -1,6 +1,5 @@
 <?php
 if(session_status() != PHP_SESSION_ACTIVE) session_start();
-
 require_once("../verify.php");
 
 $STYLESHEETS = array("home.css", "car_viewer.css", "error.css");
