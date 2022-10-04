@@ -2,7 +2,7 @@ if(color) {
   const svgs = document.querySelectorAll(".car svg");
 
   const mapping = {
-    "preto" : "black",
+    "preto" : "#131313",
     "cinza" : "gray",
     "prata" : "silver",
     "branco" : "white",

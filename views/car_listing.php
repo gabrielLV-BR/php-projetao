@@ -11,14 +11,22 @@
     function get_car_html($car, $status) {
         $placa = $car["placa"];
         $modelo = $car["modelo"];
+
+        $date = new DateTime();
+        $date->setTimezone(new DateTimeZone("America/Sao_Paulo"));
+    
+        $date->setTimestamp($car["hr_entrada"]);
+        $hr_entrada = $date->format(MYSQL_TIME);
+        $date->setTimestamp($car["hr_saida"]);
+        $hr_saida = $date->format(MYSQL_TIME);
         ?> 
         <li>
             <p class="placa"><small>placa</small><?= $placa ?></p>
             <p class="modelo"><small>modelo</small><?= $modelo ?></p>
 
-            <p class="entrada"><small>entrada</small><?= date(MYSQL_TIME, $car["hr_entrada"]) ?></p>
+            <p class="entrada"><small>entrada</small><?= $hr_entrada ?></p>
             <?php if(isset($car["hr_saida"])): ?>
-                <p class="saida"><small>saída</small><?= date(MYSQL_TIME, $car["hr_saida"]) ?></p>
+                <p class="saida"><small>saída</small><?= $hr_saida ?></p>
             <?php endif; ?>
             <hr>
             <p class="status"><small>Status</small> <?= $status ?></p>

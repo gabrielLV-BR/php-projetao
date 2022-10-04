@@ -32,11 +32,11 @@ class SQLConnection
     }
   }
 
-  function query(string $query, array $vars = [])
+  function query(string $query, array $vars = [], bool $associative = true)
   {
     $query = str_replace("\n", "", trim($query));
     $q = SQLConnection::$_con->prepare($query);
     $q->execute($vars);
-    return $q->fetchAll();
+    return $q->fetchAll($associative ? PDO::FETCH_ASSOC : PDO::FETCH_NUM);
   }
 }

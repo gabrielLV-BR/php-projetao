@@ -45,7 +45,8 @@
     foreach($_SESSION["Cars"] as $id => $car) {
       $veiculo = get_vehicle_by_id($id);
       if(is_array($veiculo) && is_array($car)) {
-        $estadias[] = array(...$veiculo, ...$car);
+        // $estadias[] = array(...$veiculo, ...$car);
+        $estadias[] = array_merge($veiculo, $car);
       }
     }
 
@@ -130,7 +131,6 @@
     // Remove do estacionamento
     unset($_SESSION["Cars"][$id]);
 
-    //TODO Atualiza banco
     registrar_saida($id, $hr_entrada, $hr_saida);
   }
 
